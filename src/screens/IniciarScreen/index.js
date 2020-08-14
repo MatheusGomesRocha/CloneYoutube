@@ -16,16 +16,18 @@ import {
   ViewRow,
   LeftView,
   RightView,
+  InfoView,
   SubInfoView,
-  DotView
+  DotView,
+  UserPic
 } from './style';
 
 export default () => {
   
   let videos = [
-    {img: require('../../assets/images/thumbnail.png'), title: 'ASMR VOZ COM CILINDRO E SONS RELAXANTES', userPic: 'user-circle', user: 'Sweet Carol', views: '237 mil visualizações', date: 'há 1 ano' },
-    {img: require('../../assets/images/thumbnail.png'), title: 'ASMR VOZ COM CILINDRO E SONS RELAXANTES', userPic: 'user-circle', user: 'Sweet Carol', views: '237 mil visualizações', date: 'há 9 horas' },
-    {img: require('../../assets/images/thumbnail.png'), title: 'teste', userPic: 'user', user: 'userTeste', views: '157 mil visualizações', date: 'há 7 meses' },
+    {img: require('../../assets/images/thumbnail_carol.png'), title: 'HAHHAHA ANDRÉ É TROUXÃO HHAHHAHAA', userPic: require('../../assets/images/carol_pic.jpg'), user: 'Sweet Carol', views: '237 mil visualizações', date: 'há 1 ano' },
+    {img: require('../../assets/images/thumbnail_kuster.jpg'), title: 'COMENDO O CÚ DO CARLOS ANDRÉ, SERÁ SE GOSTEI?!', userPic: require('../../assets/images/kuster_pic.png'), user: 'Maicon Kuster', views: '237 mil visualizações', date: 'há 9 horas' },
+    {img: require('../../assets/images/thumbnail.png'), title: 'teste', user: 'userTeste', userPic: require('../../assets/images/eu.jpeg'), views: '157 mil visualizações', date: 'há 7 meses' },
   ];
 
     return(
@@ -38,14 +40,16 @@ export default () => {
                 <Img source={v.img} />
                 <ViewRow>
                   <LeftView>
-                    <Icon name={v.userPic} size={40} />
+                    <UserPic source={v.userPic} />
                   </LeftView>
                   <RightView>
-                    <Title>{v.title}</Title>
+                    <InfoView>
+                      <Title>{v.title}</Title>
+                      <Icon name="ellipsis-v" size={20} color="#ccc"/>
+                    </InfoView>
                     <SubInfoView>
-                      <User>{v.user} -</User>
-                      <Views> {v.views} -</Views>
-                      <Date> {v.date} </Date>
+                      <User>{v.user} - {v.views} - {v.date}</User>
+                      
                     </SubInfoView>
                   </RightView>
                 </ViewRow>

@@ -17,7 +17,7 @@ export default () => {
                     height: 50,
                     backgroundColor: '#fff',
                     borderTopWidth: 1,
-                    borderTopColor: '#434343',
+                    borderTopColor: '#ccc',
                     paddingTop: 8
                 },
                 labelStyle: {   // Estilo do Label

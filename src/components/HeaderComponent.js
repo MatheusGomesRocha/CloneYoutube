@@ -8,7 +8,6 @@ const Header = styled.View`
     borderBottomColor: #ccc;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
 `;
 
 const Logo = styled.Image`
@@ -20,16 +19,34 @@ const UserPic = styled.Image`
     width: 27px;
     height: 27px;
     border-radius: 100px;
+    margin:0 10px 0 25px;
+`;
+
+const ViewLeft = styled.View`
+    width: 30%;
+    margin-left: 20px;
+`;
+
+const ViewRight = styled.View`
+    width: 70%;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 30px;
+
 `;
 
 export default () => {
     return(
         <Header>
-            <Logo source={require('../assets/images/logo.jpg')} />
-            <Icon name="tv" size={25} />
-            <Icon name="forward" size={25} />
-            <Icon name="search" size={25} />
-            <UserPic source={require('../assets/images/eu.jpeg')} />
+            <ViewLeft>
+                <Logo source={require('../assets/images/logo.jpg')} />
+            </ViewLeft>
+            <ViewRight>
+                <Icon name="tv" size={25} style={{marginLeft: 25}}/>
+                <Icon name="search" size={25} style={{marginLeft: 25}}/>
+                <UserPic source={require('../assets/images/eu.jpeg')} />
+            </ViewRight>
+            
         </Header>
     );
 }
