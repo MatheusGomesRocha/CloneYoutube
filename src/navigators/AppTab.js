@@ -16,13 +16,13 @@ export default () => {
                 style: {    // Estilo da TabBar
                     height: 50,
                     backgroundColor: '#fff',
-                    padding: 10,
                     borderTopWidth: 1,
-                    borderTopColor: '#434343'
+                    borderTopColor: '#434343',
+                    paddingTop: 8
                 },
                 labelStyle: {   // Estilo do Label
                     fontSize: 10,
-                    paddingBottom: 5
+                    paddingBottom: 2
                 },
                 keyboardHidesTabBar: true
             }}
@@ -50,7 +50,7 @@ export default () => {
                     
                     // name no Icon irá receber a variável para ser adicionado dinamicamente
                     // Se a Tab estiver focado, irá receber a cor Preta ´para dar um destaque a mais dos outros 
-                    return <Icon name={icon} size={22} style={{ color: focused ? '#ff0000' : '#434343'}}/>
+                    return <Icon name={icon} size={25} style={{ color: focused ? '#ff0000' : '#666'}}/>
                 }
             })} 
         >
