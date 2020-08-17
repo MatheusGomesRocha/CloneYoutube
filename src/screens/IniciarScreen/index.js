@@ -22,11 +22,12 @@ import {
   UserPic
 } from './style';
 
+import {FlatList} from 'react-native';
 export default () => {
   
   let videos = [
     {img: require('../../assets/images/thumbnail_carol.png'), title: 'HAHHAHA ANDRÉ É TROUXÃO HHAHHAHAA', userPic: require('../../assets/images/carol_pic.jpg'), user: 'Sweet Carol', views: '237 mil visualizações', date: 'há 1 ano' },
-    {img: require('../../assets/images/thumbnail_kuster.jpg'), title: 'COMENDO O CÚ DO CARLOS ANDRÉ, SERÁ SE GOSTEI?!', userPic: require('../../assets/images/kuster_pic.png'), user: 'Maicon Kuster', views: '237 mil visualizações', date: 'há 9 horas' },
+    {img: require('../../assets/images/thumbnail_kuster.jpg'), title: 'COMENDO O CÚ DO CARLOS ANDRÉ, SERÁ SE GOSTEI?!', userPic: require('../../assets/images/kuster_pic.png'), user: 'Maicon Kuster', views: '1.3 mi visualizações', date: 'há 9 horas' },
     {img: require('../../assets/images/thumbnail.png'), title: 'teste', user: 'userTeste', userPic: require('../../assets/images/eu.jpeg'), views: '157 mil visualizações', date: 'há 7 meses' },
   ];
 
